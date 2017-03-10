@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/content_main"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="br.com.ggsoftware.avisoperiodico.NovoLembreteActivity"
+    tools:showIn="@layout/activity_novo_lembrete"        android:orientation="vertical"
+    >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:hint="Escreva seu lembrete"
+        android:id="@+id/edtLembrete"
+        android:lines="5"/>
+    />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Primeiro lembrete"
+            />
+
+        <EditText
+            android:id="@+id/edtDataHora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"  android:layout_weight="2"
+            android:inputType="datetime"
+
+
+            />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Periodicidade"
+            />
+
+        <EditText
+            android:id="@+id/edtPeriodicidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"  android:layout_weight="2"
+            android:inputType="number"
+            />
+
+        <Spinner
+            android:id="@+id/periodicidade_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rdNotificacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="onRadioButtonClicked"
+            android:text="Notificação" />
+
+        <RadioButton
+            android:id="@+id/rdAlarme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="Alarme" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnAgendar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="agendar"
+        android:text="Agendar lembrete" />
+
+
+
+
+</LinearLayout>
+
+
+
+
